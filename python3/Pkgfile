@@ -1,0 +1,63 @@
+# Description:	Python interpreter, release 3.12.1
+# URL:		https://www.python.org/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	bzip2 expat libffi libtirpc mpdecimal openssl3 sqlite3 xz
+
+name=python3
+_realname=Python
+version=3.12.5
+release=1
+source=(https://www.python.org/ftp/python/${version}/${_realname}-${version}.tar.xz)
+
+build() {
+	cd ${_realname}-${version}
+
+	# Ensure that we are using the system copy of various libraries
+	rm -r Modules/expat
+	rm -r Modules/_decimal/libmpdec
+
+	# Remove tests
+	rm -r Lib/test
+	rm -r Lib/idlelib/idle_test
+
+	export CFLAGS_NODIST="${CFLAGS/-O2/-O3}"
+	export CXXFLAGS_NODIST="${CXXFLAGS/-O2/-O3}"
+	export LDFLAGS_NODIST="$LDFLAGS"
+
+	# we set them via NODIST to not propagate them and duplicate them to modules
+	unset LDFLAGS CFLAGS CXXFLAGS CPPFLAGS
+
+	./configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr \
+		--enable-ipv6 \
+		--enable-loadable-sqlite-extensions \
+		--enable-optimizations \
+		--enable-shared \
+		--with-computed-gotos \
+		--with-dbmliborder=gdbm:ndbm \
+		--with-lto \
+		--with-system-expat \
+		--with-system-libmpdec \
+		--with-tzpath=/usr/share/zoneinfo \
+		--without-ensurepip \
+		--without-pydebug \
+		--without-static-libpython
+
+	make V=1
+
+	make -j1 DESTDIR=$PKG install
+
+	ln -s python3 $PKG/usr/bin/python
+	ln -s python3-config $PKG/usr/bin/python-config
+	ln -s idle3 $PKG/usr/bin/idle
+	ln -s pydoc3 $PKG/usr/bin/pydoc
+	ln -s python${version%.*} $PKG/usr/lib/$name
+
+	rm $PKG/usr/lib/python${version%.*}/ctypes/macholib/README.ctypes
+	rm $PKG/usr/lib/python${version%.*}/idlelib/{ChangeLog,NEWS2x.txt,News3.txt}
+	rm $PKG/usr/lib/python${version%.*}/idlelib/{README,TODO,CREDITS,HISTORY}.txt
+	rm $PKG/usr/lib/python${version%.*}/idlelib/Icons/README.txt
+	rm $PKG/usr/lib/python${version%.*}/site-packages/README.txt
+}
