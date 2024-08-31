@@ -1,0 +1,5 @@
+untrusted comment: verify with core-loongarch64.pub
+RWQbQUCiL5ofFXFolW3Le/Dv6Wh2K/jnkFemtRFwoNztMCHYaIKT7OZKupUCiZsSatpLQ0IJPcA4prYvFRhJngVzFByG8G2wIgI=
+SHA256 (Pkgfile) = a812e345640c66b4def1705f297f154d62694068b955f9e18b770d3e258eeb4e
+SHA256 (.footprint) = aaaadf5eab9067c8d2592b626a350538a2c64ba63a9462b219cddab14044bda6
+SHA256 (binutils-2.43.1.tar.xz) = 13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
