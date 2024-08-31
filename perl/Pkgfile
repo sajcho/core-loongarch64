@@ -1,0 +1,58 @@
+# Description:	Perl programming language
+# URL:		http://www.perl.org/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	db gdbm libnsl libtirpc libxcrypt
+
+name=perl
+version=5.40.0
+release=1
+source=(http://www.cpan.org/src/5.0/${name}-${version}.tar.xz)
+
+build() {
+	cd ${name}-${version}
+
+	# Ensure that we never accidentally bundle zlib or bzip2
+	rm -rf cpan/Compress-Raw-Zlib/zlib-src
+	rm -rf cpan/Compress-Raw-Bzip2/bzip2-src
+	sed -i '/\(bzip2\|zlib\)-src/d' MANIFEST
+
+	export BUILD_ZLIB=0
+	export BUILD_BZIP2=0
+	export BZIP2_LIB=/usr/lib
+	export BZIP2_INCLUDE=/usr/include
+
+	./Configure -des \
+		-Darchname=linux \
+		-Dprefix=/usr \
+		-Dvendorprefix=/usr \
+		-Dprivlib=/usr/lib/perl5/${version%.*} \
+		-Dsitelib=/usr/lib/perl5/site_perl/${version%.*} \
+		-Dvendorlib=/usr/lib/perl5/site_perl/${version%.*} \
+		-Dman1ext=1pm \
+		-Dman3ext=3pm \
+		-Di_gdbm \
+		-Di_db \
+		-Duseshrplib \
+		-Dusethreads \
+		-Doptimize="$CFLAGS" \
+		-Dcccdlflags='-fPIC' \
+		-Dccdlflags='-rdynamic' \
+		-Dcf_by="SAUX-LoongArch64"
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	ln -sf perl${version%-*} $PKG/usr/bin/perl
+	ln -sf perlbug.1pm $PKG/usr/share/man/man1/perlthanks.1pm
+
+	find $PKG -iname 'Change*' -or \
+		-iname 'README*' -or \
+		-name 'TODO*' -or \
+		-name '*.bs' -or \
+		-name '.packlist' -or \
+		-name 'perllocal.pod' | xargs rm
+
+	find $PKG -depth -empty -exec rmdir {} \;
+	chmod -R +w $PKG
+}
