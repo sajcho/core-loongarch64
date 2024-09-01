@@ -1,0 +1,6 @@
+untrusted comment: verify with core-loongarch64.pub
+RWQbQUCiL5ofFVOwaTQtNZjQt+i3n1efXUV6AvZBEWogaUPOZ1XSXoVIT82aF6MA77UpM317ey1W0DUI17vBR9l2rwkK1+MK6wY=
+SHA256 (Pkgfile) = ca957ea0d4ffe1d1eac838459ce79590e72c316f401cf573051e9caaff015504
+SHA256 (.footprint) = ff7e22fc50433199009b1f4455873217b1505ad12e2fd22ec0ef7e965db42056
+SHA256 (pkgconf-2.3.0.tar.xz) = 3a9080ac51d03615e7c1910a0a2a8df08424892b5f13b0628a204d3fcce0ea8b
+SHA256 (loongarch64-unknown-linux-gnu.personality) = 31d1db72e51453d17321b31be7f2a9a5f6e901f393527471a3a32fdc72f80cd8
