@@ -1,0 +1,17 @@
+untrusted comment: verify with core-loongarch64.pub
+RWQbQUCiL5ofFfr0dZjbS5GYG2qJ8Zu7bsqT7Dl04VIStOmGAI8zVLecsneztEV+cmHHOtyYFzo1U3RkmH+OWPUCxt8AY97vgwE=
+SHA256 (Pkgfile) = 991dbd547d67edf2e66778c2a74f5ee66a620bc97688d5a425483b370de7a0c0
+SHA256 (.footprint) = a6671fee0d9937d40f88da27ff0788dfbf10a09fb7c1a8b518f4ca6386e4cc9a
+SHA256 (ports-1.6.tar.gz) = 8b2ba48e7440f4a71fa1c9c480a1212ce87c623e1d33121eb660829ba294ca94
+SHA256 (core-loongarch64.httpup) = 3b3d4d1292a366d1ab474aecae9d005d673103d1d1f8ad4d23666271623c733a
+SHA256 (core-loongarch64.pub) = 83694120c6a959ec5321506cf808d9c504fdc4ec353e7c88e2deea38c6a7a92c
+SHA256 (core-x86_64.httpup) = 92961e8b161d367e3e25dcd1a22e55acbf4956720f1bec8323ebeb3c41032da0
+SHA256 (core-x86_64.pub) = 4625b704d67c8cc8c1da9a0b905c8c8e5be4b292ab4f1c658d9758862643b67c
+SHA256 (opt-loongarch64.httpup) = 9b13e67dca36df2ecb2ab5c752a2c599d36acace19537718a94e5db56bda9837
+SHA256 (opt-loongarch64.pub) = 72fa8d60701bfc81cc40db1559f76998b847e3aea2c8c85c81e3876bf5e011f8
+SHA256 (opt-x86_64.httpup) = d7749896bbcd5a817f0eb91598d14837b69655064bf7a9f1d5e8b1d7f4fffb59
+SHA256 (opt-x86_64.pub) = e47725cad96dd63d1b4f14930df3dd6c0801d7e79795bec20fa89361ed9f8c7f
+SHA256 (wayland-loongarch64.httpup) = 5808bd1d62925900b822828fcfe30988cdaa868d5c3f98c89389c9e5e7a1ccec
+SHA256 (wayland-loongarch64.pub) = 76cac729532288d487009db00107882cf3fda58fe98749e8d188d3216c635760
+SHA256 (wayland-x86_64.httpup) = cbc53072bec3ffa6ac3c9db9e433f9879d8e9dcb1d3a6408b725826f09ae3f3f
+SHA256 (wayland-x86_64.pub) = 851a6df2601c5ee71ab051c23001d9235b8246a1b4c1bdb0a23e2d96a85a21c5

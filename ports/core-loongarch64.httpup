@@ -1,0 +1,6 @@
+# core-loongarch64 ports collection
+#
+# https://github.com/sajcho/core-loongarch64
+
+ROOT_DIR=/usr/ports/core-loongarch64
+URL=https://raw.githubusercontent.com/sajcho/core-loongarch64/main
