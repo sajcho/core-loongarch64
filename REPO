@@ -1,5 +1,7 @@
 d:kbd
+d:runit-saux
 d:gcc
+d:pkgconf
 d:ports
 d:binutils
 d:python3
@@ -8,11 +10,18 @@ d:perl
 f:cb16f26de91da8792221c4bb295a5329:kbd/.footprint
 f:076c5a5114be99f68db156148b6edcd4:kbd/.signature
 f:482c0deee59f6bbf7bbacc61eb805acb:kbd/Pkgfile
+f:159aefdfbc12502327a3deffee4be70e:runit-saux/.footprint
+f:8cf61873e106de44ce3cbc00f3348f5b:runit-saux/.signature
+f:bbe27fe0323a4d8772a4b513aecb6230:runit-saux/Pkgfile
 f:2acabca7aaf6400eab4449849b9e0b49:gcc/.footprint
 f:da96f545b863e57c6ab2598c1ea9a740:gcc/c99
 f:c5584c8d491dc5a8f91868f08479db7d:gcc/.signature
 f:5fe30d7c47b520e7a77ed981db0bc2c5:gcc/Pkgfile
 f:3d333df77302ed89e06a4a8539943b7d:gcc/c89
+f:e55df2d5cde44586b3d5ad5a89a4ccfb:pkgconf/loongarch64-unknown-linux-gnu.personality
+f:836a686e150f4b02c27de7ce0a2fc2d5:pkgconf/.footprint
+f:1e64d7640cd4fdc88daa3ef363a96000:pkgconf/.signature
+f:75829fec5a0e54e5d7085768cf88fcda:pkgconf/Pkgfile
 f:f37b38fdc35e0ee13a5de571081144a3:core-loongarch64.httpup
 f:7e4b5abf75b96f6c4de591e35c6621ce:ports/wayland-x86_64.httpup
 f:31fd22e0cd8da6ce76e63498f5ed0aeb:ports/opt-loongarch64.httpup
