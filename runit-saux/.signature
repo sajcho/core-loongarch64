@@ -1,0 +1,6 @@
+untrusted comment: verify with core-loongarch64.pub
+RWQbQUCiL5ofFWeW8yJG24fg74eO2do3hbY6F9xQ2kZWvBXWAaoSy+MrynM+Dm5A11rvni4DsKrrQf8jcgaMue3MbeV9RHhs/g4=
+SHA256 (Pkgfile) = 0ac32bb4ed5a155ee8842e6a1c8e7ecad6aa44faea3dd9a6457e028b1540137f
+SHA256 (.footprint) = fecde50b40e569e3c9a91482062ac1fe7ce17d7bb8ee0ed1bce842e548571c9c
+SHA256 (runit-saux-1.0.0b1.tar.gz) = d61d352815e88743d0d417fa5c65ad5a8c502526ded6fa5ad7efe502f094d2da
+SHA256 (bash-vsv-1.3.5.tar.gz) = fe04cf02b6aa6b906c5fbfdea0ecd073380a68c39622ff1617caaaf87a135b62
